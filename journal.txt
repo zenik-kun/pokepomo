@@ -12,4 +12,7 @@ with changes in tailwind.config.js and added the pokemon font.
 
 done with _layout.jsx (root layout)
 
-start from index.jsx
+index.jsx is done, I have made files of components and images file in assets.
+
+start with components.
+
