@@ -1,0 +1,15 @@
+pokepomo
+
+simple expo installtion using:
+
+npx create-expo-app@latest ./ --template blank
+
+after that steps are given on: https://docs.expo.dev/router/installation/
+
+after this is done, added nativewind: https://www.nativewind.dev/quick-starts/expo
+
+with changes in tailwind.config.js and added the pokemon font.
+
+done with _layout.jsx (root layout)
+
+start from index.jsx
