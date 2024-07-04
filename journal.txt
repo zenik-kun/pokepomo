@@ -14,7 +14,7 @@ done with _layout.jsx (root layout)
 
 index.jsx is done, I have made files of components and images file in assets.
 
-done with Header, which includes PokéPomo title at bottom.
+done with Header.jsx, which includes PokéPomo title at bottom.
 
-
+done with Pomodoro.jsx, which has input of work time and break time and also the timer component is used within it. 
 
