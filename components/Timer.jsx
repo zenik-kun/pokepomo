@@ -3,10 +3,41 @@ import React, { useEffect, useState } from 'react'
 import TimerHeader from './TimerHeader';
 import TimerDisplay from './TimerDisplay';
 import TimerButtons from './TimerButtons';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Timer = ({ period, intervalType, onComplete, isCompleted, setIsCompleted, setIntervalType }) => {
     const [running, setRunning] = useState(false);
-    const [time, setTime] = useState(period * 60)
+    const [time, setTime] = useState(period * 60);
+
+    const saveTimerState = async (time) => {
+        try {
+            await AsyncStorage.setItem('timerState', JSON.stringify({ time, intervalType, running }));
+        } catch (error) {
+            console.error("Failed to save timer state", error);
+        }
+    };
+
+    const getTimerState = async () => {
+        try {
+            const state = await AsyncStorage.getItem('timerState');
+            return state ? JSON.parse(state) : null;
+        } catch (error) {
+            console.error("Failed to get timer state", error);
+            return null;
+        }
+    };
+
+    useEffect(() => {
+        const loadTimerState = async () => {
+            const state = await getTimerState();
+            if (state) {
+                setTime(state.time);
+                setIntervalType(state.intervalType);
+                setRunning(state.running);
+            }
+        };
+        loadTimerState();
+    }, []);
 
     useEffect(() => {
         setRunning(false);
@@ -18,7 +49,11 @@ const Timer = ({ period, intervalType, onComplete, isCompleted, setIsCompleted, 
         let timerId;
         if (running && time > 0) {
             timerId = setInterval(() => {
-                setTime((prevTime) => prevTime - 1);
+                setTime((prevTime) => {
+                    const newTime = prevTime - 1;
+                    saveTimerState(newTime);
+                    return newTime;
+                });
             }, 1000);
         } else if (running && time === 0) {
             clearInterval(timerId);
