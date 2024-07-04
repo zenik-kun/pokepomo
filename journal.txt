@@ -20,5 +20,7 @@ done with Pomodoro.jsx, which has input of work time and break time and also the
 
 done with Timer.jsx, which basically contains timer header, display and it's buttons.
 
+done with TimerHeader.jsx, which basically has text which changes on basis of interval type and running status about timer.
+
 
 
