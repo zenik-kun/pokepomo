@@ -7,12 +7,19 @@ import PomodoroTimer from "../components/PomodoroTimer";
 import Header from "../components/Header";
 import { StatusBar } from 'expo-status-bar';
 import registerBackgroundTask from '../lib/backgroundTimer';
+import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
 
 const App = () => {
     NavigationBar.setBackgroundColorAsync('#6AA563')
 
     useEffect(() => {
         registerBackgroundTask(); // Register the background task
+
+        activateKeepAwakeAsync();
+
+        return() => {
+            deactivateKeepAwake();
+        }
     }, [])
 
     return (
