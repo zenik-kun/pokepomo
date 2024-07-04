@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "poképomo",
+    "name": "PokéPomo",
     "slug": "pokepomo",
     "scheme": "pokepomo",
     "version": "1.0.0",
@@ -22,7 +22,8 @@
       },
       "permissions": [
         "BACKGROUND_FETCH"
-      ]
+      ],
+      "package": "com.zenik.pokepomo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -30,6 +31,14 @@
     "plugins": [
       "expo-router",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "821e610b-51b3-4b17-9e86-238decf3db4e"
+      }
+    }
   }
 }
