@@ -18,8 +18,8 @@ const App = () => {
             >
                 <ScrollView className = "h-full">
                     <PomodoroTimer />
-                    <Header />
                 </ScrollView>
+                <Header />
             </ImageBackground>
         </SafeAreaView>
     )

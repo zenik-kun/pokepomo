@@ -9,7 +9,7 @@ const TimerDisplay = ({ time }) => {
 
 
     return (
-        <View className = "mb-10 border-4 borde-white rounded-3xl items-center">
+        <View className = "mb-10 border-4 border-white rounded-3xl items-center">
             <Text className = "text-white text-8xl font-pokemon">
                 {minutes}:{seconds}
             </Text>
