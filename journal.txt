@@ -24,5 +24,7 @@ done with TimerHeader.jsx, which basically has text which changes on basis of in
 
 done with TimerDisplay.jsx, which basically shows the time in minutes and seconds.
 
+done with TimerButtons.jsx, it manages which buttons should be present while running and while not running.
+
 
 
