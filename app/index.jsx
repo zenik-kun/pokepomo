@@ -5,6 +5,7 @@ import { ImageBackground, ScrollView } from 'react-native';
 import { images } from '../constants';
 import PomodoroTimer from "../components/PomodoroTimer";
 import Header from "../components/Header";
+import { StatusBar } from 'expo-status-bar';
 
 const App = () => {
     NavigationBar.setBackgroundColorAsync('#6AA563')
@@ -21,6 +22,7 @@ const App = () => {
                 </ScrollView>
                 <Header />
             </ImageBackground>
+            <StatusBar backgroundColor = '#79C9FA' style='light' />
         </SafeAreaView>
     )
 }
