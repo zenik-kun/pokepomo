@@ -22,5 +22,7 @@ done with Timer.jsx, which basically contains timer header, display and it's but
 
 done with TimerHeader.jsx, which basically has text which changes on basis of interval type and running status about timer.
 
+done with TimerDisplay.jsx, which basically shows the time in minutes and seconds.
+
 
 
