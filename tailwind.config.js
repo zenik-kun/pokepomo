@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       colors: {
         sky: "#79C9FA",
-        grass: "#7FAC71"
+        grass: {
+          DEFAULT: "#7FAC71",
+          100: "#A4E75A",
+        },
       },
       fontFamily: {
         pokemon: ["pokemon", "sans-serif"]
