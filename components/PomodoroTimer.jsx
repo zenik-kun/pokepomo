@@ -1,5 +1,5 @@
 import { View, Text, TextInput } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import Timer from "./Timer"
 
 const PomodoroTimer = () => {

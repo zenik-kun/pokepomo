@@ -1,5 +1,5 @@
 import { View, Vibration } from 'react-native'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import TimerHeader from './TimerHeader';
 import TimerDisplay from './TimerDisplay';
 import TimerButtons from './TimerButtons';
